@@ -52,11 +52,11 @@ color: #565468;
   width: 140px;
   height: 140px;
 }
-.picked__img {
+.picked__img img{
   width: 140px;
   height: 140px;
 }
-.random__img {
+.random__img img{
   width: 140px;
   height: 140px;
 }
