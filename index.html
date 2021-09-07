@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hello, world!</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main class="main row">
+  <section class="display-result border container-md mt-3 rounded-lg col-10 py-3 px-4">
+
+    <div class="display-result__box  justify-content-between row px-3">
+      <div class="title col-3 px-0 py-3">
+        <p class="text-light m-0 h5">ROCK</p>
+        <p class="text-light m-0 h5">PAPER</p>
+        <p class="text-light m-0 h5">SCISSORS</p>
+      </div>
+      <div class="result__box col-2 bg-light d-flex flex-column align-items-center justify-content-center rounded-lg px-0">
+        <p class="text-primary result__text h6 m-0 ">SCORE</p>
+        <span class="js-result-ball display-4 h1 m-0 font-weight-bold">12</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero row col-12">
+  <section class="choice container-md col-12">
+    <div class="choice__box">
+      <ul class="row list-unstyled justify-content-center mt-4 pt-5">
+        <li class="col-4 item-paper"><button class="btn d-block mx-auto choice__button choice__button--paper" type="button"></button></li>
+        <li class="col-4 item-scissors"><button class="btn d-block mx-auto choice__button choice__button--scissors" type="button"></button></li>
+        <li class="col-5 item-rock"><button class="btn d-block mx-auto choice__button choice__button--rock" type="button"></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section--active d-none container-md col-12">
+    <div class="active__box">
+
+<ul class="row list-unstyled justify-content-center mt-4 pt-5">
+    <li class="col-4 pick__box">
+        <div class="picked__box">
+          <div class="picked__img mb-4"></div>
+          <p class="text-light h5 text-center">YOUR PICKED</p>
+      </div>
+    </li>
+    <li class="col-3 pick__box">
+    <div class="mt-5 d-flex flex-column align-items-center">
+        <span class="text-light result display-4  font-weight-bolder"></span>
+        <div class="button__box"><button class="again btn bg-light text-dark font-weight-bold  mx-auto d-block mt-4 py-2 text-nowrap" type="button">PLAY AGAIN</button></div>
+    </div>
+  </li>
+    <li class="col-4">
+      <div class="random__box">
+        <div class="random__img mb-4"></div>
+        <p class="text-light h5 text-center">THE HOUSE PICKED</p>
+      </div>
+    </li>
+</ul>
+
+    </div>
+  </section>
+
+</section>
+
+  <button class="btn btn-rules border mt-auto mb-3" type="button" data-bs-toggle="modal" data-bs-target="#rules">RULES</button>
+
+</main>
+
+
+  <script src="js/main.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

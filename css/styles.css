@@ -1,0 +1,64 @@
+.main {
+  background-image: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.js-result-ball{
+color: #565468;
+}
+
+.choice__button {
+  height: 200px;
+  width: 200px;
+  background-image: url("../img/img-qogoz.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.choice__button--scissors {
+  background-image: url("../img/img-qaychi.svg");
+}
+
+.picked__img img , .random__img img{
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.choice__button--rock {
+  background-image: url("../img/img-tosh.svg");
+}
+
+.btn-rules {
+  width: 128px;
+  height: 40px;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-rules:hover {
+  background-color: #fff;
+  color: #3B4262;
+}
+
+@media only screen and (max-width: 750px) {
+.choice__button {
+  width: 140px;
+  height: 140px;
+}
+.picked__img {
+  width: 140px;
+  height: 140px;
+}
+.random__img {
+  width: 140px;
+  height: 140px;
+}
+
+}
