@@ -9,6 +9,7 @@ var elItemScissors = elChoice.querySelector(".item-scissors");
 var elItemRock = elChoice.querySelector(".item-rock");
 var elChoiceButtons = elChoice.querySelectorAll(".choice__button");
 // var elBtnPaper = elChoice.querySelector(".choice__button--paper");
+var elResultText = document.querySelector('.js-result-ball');
 var elBtnScissors = elChoice.querySelector(".choice__button--scissors");
 var elBtnRock = elChoice.querySelector(".choice__button--rock");
 //  ACTIVE
@@ -18,7 +19,9 @@ var elResult = elAcitve.querySelector(".result");
 var elMyPickImg = elAcitve.querySelector(".picked__img");
 var elPickImg = elAcitve.querySelector(".random__img");
 var elRulesBtn = main.querySelector(".btn-rules");
-var elRandom = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+var elRandomm = (min, max) => {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
 var array = [];
 var btnBox = document.querySelector(".button__box")
 // hero.addEventListener("click" , function(){
@@ -29,6 +32,7 @@ var btnBox = document.querySelector(".button__box")
 //     array.push(elChoiceButtons);
 //   })
 
+var count = 0
 
 // elItemPaper.addEventListener('click' , function(){
 
@@ -40,22 +44,25 @@ var btnBox = document.querySelector(".button__box")
 
     elChoice.classList.add("d-none");
     elAcitve.classList.remove("d-none");
+    var elRandom = elRandomm(1,4)
 
     if(elRandom === 1){
       var elPaperImg = document.createElement('img');
       elPaperImg.src = '../img/img-qogoz.svg';
       elPickImg.appendChild(elPaperImg);
-      elResult.textContent = 'SAME'
+      elResult.textContent = 'SAME';
     }else if(elRandom === 2){
       var elScissorsImg = document.createElement('img');
       elScissorsImg.src = '../img/img-qaychi.svg';
       elPickImg.appendChild(elScissorsImg);
-      elResult.textContent = 'YOU LOSE'
+      elResult.textContent = 'YOU LOSE';
     }else if(elRandom === 3){
       var elRockImg = document.createElement('img');
       elRockImg.src = '../img/img-tosh.svg';
       elPickImg.appendChild(elRockImg);
-      elResult.textContent = 'YOU WIN'
+      elResult.textContent = 'YOU WIN';
+      count++;
+      elResultText.textContent = count;
       // score++;
       // elnatija.textContent = score
     }
@@ -71,12 +78,15 @@ elItemScissors.querySelector(".choice__button--scissors").onclick = function(){
 
   elChoice.classList.add("d-none");
   elAcitve.classList.remove("d-none");
+  var elRandom = elRandomm(1,4)
 
   if(elRandom === 1){
     var elPaperImg = document.createElement('img');
     elPaperImg.src = '../img/img-qogoz.svg';
     elPickImg.appendChild(elPaperImg);
     elResult.textContent = 'YOU WIN'
+    count++;
+    elResultText.textContent = count;
   }else if(elRandom === 2){
     var elScissorsImg = document.createElement('img');
     elScissorsImg.src = '../img/img-qaychi.svg';
@@ -100,6 +110,7 @@ elItemRock.querySelector(".choice__button--rock").onclick = function(){
 
     elChoice.classList.add("d-none");
     elAcitve.classList.remove("d-none");
+    var elRandom = elRandomm(1,4)
 
   if(elRandom === 1){
     var elPaperImg = document.createElement('img');
@@ -111,6 +122,8 @@ elItemRock.querySelector(".choice__button--rock").onclick = function(){
     elScissorsImg.src = '../img/img-qaychi.svg';
     elPickImg.appendChild(elScissorsImg);
     elResult.textContent = 'YOU WIN'
+    count++;
+    elResultText.textContent = count;
   }else if(elRandom === 3){
     var elRockImg = document.createElement('img');
     elRockImg.src = '../img/img-tosh.svg';
@@ -119,10 +132,13 @@ elItemRock.querySelector(".choice__button--rock").onclick = function(){
   }
 }
 
-btnBox.querySelector(".again").onclick = function(){
-  location.reload();
-}
 
+btnBox.querySelector(".again").onclick = function(){
+  elPickImg.innerHTML ='';
+  elMyPickImg.innerHTML = '';
+  elChoice.classList.remove("d-none");
+  elAcitve.classList.add("d-none");
+}
 
   // if(random === 1){
   //   var elPaperImg = elPickImg.createElement('img');
@@ -133,4 +149,4 @@ btnBox.querySelector(".again").onclick = function(){
   // }else if(random === 3){
   //   var elRockImg = elPickImg.createElement('img');
   //   elRockImg.src = '../img/img-tosh.svg';
-  // }
+  //

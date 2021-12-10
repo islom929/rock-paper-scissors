@@ -5,7 +5,7 @@
 }
 
 .js-result-ball{
-color: #565468;
+  color: #565468;
 }
 
 .choice__button {
@@ -22,7 +22,7 @@ color: #565468;
   background-image: url("../img/img-qaychi.svg");
 }
 
-.picked__img img , .random__img img{
+.picked__img img, .random__img img{
   width: 200px;
   height: 200px;
   margin-left: auto;
@@ -48,17 +48,16 @@ color: #565468;
 }
 
 @media only screen and (max-width: 750px) {
-.choice__button {
-  width: 140px;
-  height: 140px;
-}
-.picked__img img{
-  width: 140px;
-  height: 140px;
-}
-.random__img img{
-  width: 140px;
-  height: 140px;
-}
-
+  .choice__button {
+    width: 140px;
+    height: 140px;
+  }
+  .picked__img img{
+    width: 140px;
+    height: 140px;
+  }
+  .random__img img{
+    width: 140px;
+    height: 140px;
+  }
 }
